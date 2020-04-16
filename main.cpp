@@ -77,30 +77,4 @@ int main() {
     return 0;
 }
 
-/* int main() {
-    HashMap Numbers (20);
-    Entry N(5,5);
-    try {
-
-        Numbers.insert(-5,10);
-         Numbers.insert(6,12);
-        Numbers.insert(201,200);
-        Numbers.insert(5,15);
-        Numbers.insert(-5,13);
-
-        Numbers.printTable();
-
-        Numbers.removeValue(12);
-
-        Numbers.printTable();
-
-        std::cout << Numbers.getAt(5);
-
-    }
-    catch (std::exception & e) {
-        std::cout << "An error occured: " << e.what() << '\n';
-        Numbers.~HashMap();
-    }
-    return 0;
-} */
 
