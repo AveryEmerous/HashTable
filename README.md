@@ -1,6 +1,9 @@
 # HashTable 0.1
 Built with GCC9-C++20 on Manjaro.
 
+# Basic interface
+Contains a basic interface in main.cpp to use a basic implementation of these functions.
+
 # Functions
 * Class Entry
   
