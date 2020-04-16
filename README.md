@@ -3,9 +3,12 @@ Built with GCC9-C++20 on Manjaro.
 
 # Functions
 *Class Entry
+  
   - Two data members: key, value
   - Constructor taking both data members.
+
 *Class HashMap
+  
   - 2D Array HashTable for storage
   - vSize containing size of the array
   - Constructor taking the size and generating as many slots as the given size.
