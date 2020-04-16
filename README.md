@@ -2,12 +2,12 @@
 Built with GCC9-C++20 on Manjaro.
 
 # Functions
-*Class Entry
+* Class Entry
   
   - Two data members: key, value
   - Constructor taking both data members.
 
-*Class HashMap
+* Class HashMap
   
   - 2D Array HashTable for storage
   - vSize containing size of the array
