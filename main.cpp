@@ -81,22 +81,4 @@ int main() {
     return 0;
 }
 
-/* int main() {
-    try {
-        HashMap A (20);
-        Entry N (5,5);
-        A.insert(0,5);
-
-        A[5] = 1;
-
-
-        std::cout << A << '\n';
-
-
-    }
-    catch (std::exception & e) {
-        std::cout << "An error occured: " << e.what() << '\n';
-    }
-} */
-
 
