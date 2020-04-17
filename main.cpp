@@ -15,13 +15,13 @@ int main() {
         while(choice) {
             std::cout << '\n';
             std::cout << "0)Exit.\n";
-            std::cout << "1)Insert an element to the table.\n";
-            std::cout << "2)Remove an element by it's key.\n";
-            std::cout << "3)Remove an element by it's value.\n";
-            std::cout << "4)Search for an element by it's key.\n";
-            std::cout << "4)Search for an element by it's value.\n";
-            std::cout << "5)Size of the current hash table.\n";
-            std::cout << "6)Print table.\n\n";
+            std::cout << "1)Print table.\n";
+            std::cout << "2)Insert an element to the table.\n";
+            std::cout << "3)Remove an element by it's key.\n";
+            std::cout << "4)Remove an element by it's value.\n";
+            std::cout << "5)Search for an element by it's key.\n";
+            std::cout << "6)Search for an element by it's value.\n";
+            std::cout << "7)Size of the current hash table.\n";
 
             std::cout << "Pick an option:\n";
             std::cin >> choice;
@@ -31,37 +31,41 @@ int main() {
             case 0:
                 return 0;
             case 1: {
-                std::cout << "Key: ";
-                std::cin >> key;
-                std::cout << "Value: ";
-                std::cin >> value;
-                Numbers.insert(key,value);
+                std::cout << Numbers;
                 break;
             }
             case 2: {
                 std::cout << "Key: ";
                 std::cin >> key;
-                Numbers.removeKey(key);
+                std::cout << "Value: ";
+                std::cin >> value;
+                Numbers[key] = value;
                 break;
             }
             case 3: {
+                std::cout << "Key: ";
+                std::cin >> key;
+                Numbers.removeKey(key);
+                break;
+            }
+            case 4: {
                 std::cout << "Value: ";
                 std::cin >> value;
                 Numbers.removeValue(value);
                 break;
             }
-            case 4: {
+            case 5: {
                 std::cout << "Key: ";
                 std::cin >> key;
-                Numbers.printAt(Numbers.searchKey(key));
-                break;
-            }
-            case 5: {
-                std::cout << Numbers.size() << '\n';
+                std::cout << Numbers[key] << '\n';
                 break;
             }
             case 6: {
-                Numbers.printTable();
+                std::cout << Numbers.size() << '\n';
+                break;
+            }
+            case 7: {
+                std::cout << Numbers << '\n';
                 break;
             }
             default:
@@ -76,5 +80,23 @@ int main() {
 
     return 0;
 }
+
+/* int main() {
+    try {
+        HashMap A (20);
+        Entry N (5,5);
+        A.insert(0,5);
+
+        A[5] = 1;
+
+
+        std::cout << A << '\n';
+
+
+    }
+    catch (std::exception & e) {
+        std::cout << "An error occured: " << e.what() << '\n';
+    }
+} */
 
 

@@ -6,8 +6,14 @@
 struct Entry {
     int key;
     int value;
+    
     Entry(int key, int value);
+    Entry & operator= (int value);
+
+    virtual std::ostream & ins (std::ostream & os) const;
 };
+
+std::ostream & operator<< (std::ostream & os, const Entry & ob);
 
 class HashMap {
 private:
@@ -15,7 +21,9 @@ private:
     unsigned vSize;
 
 public:
-    HashMap(unsigned size);
+    HashMap(unsigned size = 0);
+    HashMap(const HashMap & r);
+    HashMap & operator= (const HashMap & r);
     ~HashMap();
 
     unsigned keyMod(int key);
@@ -27,8 +35,13 @@ public:
     
     unsigned size() const;
 
-    void printTable() const;
     void printAt(int pos) const;
+
+    Entry & operator[](int key);
+
+    virtual std::ostream & ins (std::ostream & os) const;
 };
+
+std::ostream & operator<< (std::ostream & os, const HashMap & ob);
 
 #endif
