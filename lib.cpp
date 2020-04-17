@@ -160,7 +160,7 @@ Entry & HashMap::operator[](int key) {
 //Inserts itself into ostream to be compatible with that library.
 std::ostream & HashMap::ins (std::ostream & os) const {
     std::cout << "pos : key : value\n";
-    for (unsigned pos = 0; pos < vSize - 1; pos++)
+    for (unsigned pos = 0; pos < vSize; pos++)
          if (HashTable[pos] != nullptr) std::cout << pos << " : " << HashTable[pos]->key << " : " << HashTable[pos]->value << '\n';
     return os;
 }

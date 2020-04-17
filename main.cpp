@@ -69,7 +69,7 @@ int main() {
                 break;
             }
             default:
-                std::cout << "Invalid choice. \n";
+                std::cout << "Invalid choice.\n";
                 break;
             }
         }
