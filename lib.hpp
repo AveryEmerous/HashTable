@@ -27,15 +27,12 @@ public:
     ~HashMap();
 
     unsigned keyMod(int key);
-    void insert(int key, int value);
     void removeKey(int key);
     void removeValue(int value);
     long long searchKey(int key);
     long long searchValue(int value) const;
     
     unsigned size() const;
-
-    void printAt(int pos) const;
 
     Entry & operator[](int key);
 
